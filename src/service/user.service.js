@@ -19,4 +19,9 @@ const insertUser = async (newUser) => {
   return { type: null, message: jwt };
 };
 
-module.exports = { insertUser };
+const getUsers = async () => {
+  const allUsers = await User.findAll({ attributes: { exclude: 'password' } });
+  return { type: null, message: allUsers };
+};
+
+module.exports = { insertUser, getUsers };
