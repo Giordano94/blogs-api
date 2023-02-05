@@ -11,5 +11,6 @@ router.post(
   validateCategoryName,
   categoryRoute.insertCategory,
 );
+router.get('/', validateJWT, categoryRoute.getCategories);
 
 module.exports = router;
