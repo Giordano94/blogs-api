@@ -8,7 +8,7 @@ const PostCategory = (sequelize, DataTypes) => {
     {
       timestamps: false,
       underscored: true,
-      tableName: "blog_posts",
+      tableName: "posts_categories",
     }
   );
 
